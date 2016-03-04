@@ -6,6 +6,9 @@ describe SimpleKryptos do
   end
 
   it 'does something useful' do
-    expect(false).to eq(true)
+    data = "shhh"
+    encrypted_text = SimpleKryptos.encrypt data
+    decrypted_text = SimpleKryptos.decrypt encrypted_text
+    expect(decrypted_text).to eq(data)
   end
 end
